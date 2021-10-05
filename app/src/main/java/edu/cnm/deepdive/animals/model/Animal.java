@@ -1,7 +1,9 @@
 package edu.cnm.deepdive.animals.model;
 
+import androidx.annotation.NonNull;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import org.jetbrains.annotations.NotNull;
 
 public class Animal {
 
@@ -35,7 +37,16 @@ public class Animal {
     return imageUrl;
   }
 
+  @NonNull
+  @NotNull
+  @Override
+  public String toString() {
+    return title;
+    }
+
+
   public void setImageUrl(String imageUrl) {
     this.imageUrl = imageUrl;
+
   }
 }
